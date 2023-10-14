@@ -1,8 +1,0 @@
-# Write your code here
-a = int(input())
-b = int(input())
-c = int(input())
-
-C_d = b - a
-
-print(C_d)
