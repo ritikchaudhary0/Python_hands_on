@@ -1,0 +1,7 @@
+# Write your code here
+X = int(input())
+N = int(input())
+
+Y = X**N
+
+print()
