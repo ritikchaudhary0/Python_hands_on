@@ -7,4 +7,4 @@ N = int(input())
 
 Y = X**N
 
-print()
+print(
