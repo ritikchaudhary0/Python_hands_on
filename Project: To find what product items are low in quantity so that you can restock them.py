@@ -18,3 +18,6 @@ for product_list in inventory_products:
         restock_products.append(product_list)
 
 print(restock_products)
+
+#Output--
+[['Docking Station', 65.41, 'USD', 1, 4.9, 'Hardware']]
