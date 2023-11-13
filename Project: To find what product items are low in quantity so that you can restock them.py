@@ -19,5 +19,16 @@ for product_list in inventory_products:
 
 print(restock_products)
 
-#Output--
-[['Docking Station', 65.41, 'USD', 1, 4.9, 'Hardware']]
+#Output-- [['Docking Station', 65.41, 'USD', 1, 4.9, 'Hardware']]
+
+
+# Modifying code to compute the total non-hardware product quantities----------
+quantity_sum = 0
+for product_list in inventory_products:
+    category = product_list[5]
+    quantity = product_list[3]
+    if category != 'Hardware':
+        quantity_sum = quantity + quantity_sum
+print(quantity_sum)
+
+#Output-- 104
