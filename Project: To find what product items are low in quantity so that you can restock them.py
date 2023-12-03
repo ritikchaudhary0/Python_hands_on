@@ -1,4 +1,4 @@
-# Project: To find what product items are low in quantity so that you can restock them---
+##### Project: To find what product items are low in quantity so that you can restock them-----------------------------------------------------------------------------------------
 
 laptop_product = ["Laptop", 899.00, "USD", 2, 3.34, "Hardware"]
 keyboard_product = ["Keyboard", 29.50, "USD", 6, 4.80, "Peripherals"]
@@ -22,7 +22,7 @@ print(restock_products)
 #Output-- [['Docking Station', 65.41, 'USD', 1, 4.9, 'Hardware']]
 
 
-# Modifying code to compute the total non-hardware product quantities----------
+##### Modifying code to compute the total non-hardware product quantities----------------------------------------------------------------------------------
 quantity_sum = 0
 for product_list in inventory_products:
     category = product_list[5]
@@ -32,3 +32,26 @@ for product_list in inventory_products:
 print(quantity_sum)
 
 #Output-- 104
+
+##### Modify the code to get What are all of the products that cost less than $50?, We will analyze this from our daily sales data------------------------------------------------------------------
+#We want to isolate all the orders with a purchase total less than or equal to $50.
+
+opened_file = open('daily_sales.txt')
+#file = opened_file.read()
+
+#print(file)
+orders_50_and_under = []
+for order in opened_file:
+    #print(order)
+    order_list = order.split(',')
+    #print(order_list)
+    order_number = order_list[0]
+    #print(order_number)
+    purchase_total = float(order_list[2])
+    #print(purchase_total)
+    if purchase_total <= 50:
+        orders_50_and_under.append(order_number)
+
+print(orders_50_and_under)
+#Output- ['4', '28']
+
